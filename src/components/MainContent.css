@@ -1,0 +1,43 @@
+.main-content {
+    position: relative; /* Establishes a positioning context for child elements */
+    margin-top: 200px;
+    padding: 20px; /* Optional for better spacing */
+}
+
+.main-content h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--h1-color);
+    margin-bottom: 30px;
+    filter: drop-shadow(2px 2px 10px #f9903593);
+
+}
+
+.main-content p {
+    font-family: "Chong Modern W01";
+    font-size: 30px;
+    margin-top: 10px;
+    color: #756e6e;
+    color: var(--p-color);
+    margin-left: 300px;
+    margin-right: 300px;
+    font-weight: bolder;
+    /* filter: drop-shadow(0px 0px 5px #f99135); */
+
+}
+
+.main-content .loc {
+    font-family: "Real Head Pro Demibold";
+    font-size: 25px;
+    margin-bottom: 50px;
+    color: #a7a687;
+    color: var(--loc-color);
+    font-weight: bolder;
+    filter: drop-shadow(0px 0px 10px #f99135);
+
+}
+
+.p:hover{
+    transform: scale(2);
+}

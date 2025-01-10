@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between avatar and menu */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-background);
+    z-index: 5;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+}
+
+.menu {
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: auto;
+    padding-right: 50px;
+    box-shadow: 10 10px 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+}
+.menu:hover {
+    transform: scale(1.1); /* Slightly enlarges the box on hover */
+}
+
+.avatar:hover{
+    transform: scale(1.1);
+}
+
+.popup-dialogue {
+    position: absolute;
+    top: 70px; /* Adjust based on avatar size */
+    left: 5px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 10;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.95);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none; /* Prevent interaction when invisible */
+}
+
+.avatar-wrapper {
+    position: relative; /* Make this container the reference point */
+}
+
+.avatar:hover + .popup-dialogue {
+    opacity: 1; /* Show popup */
+    transform: scale(1);
+    pointer-events: auto; /* Enable interaction */
+}
+
