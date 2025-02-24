@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps avatar and menu spaced */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    z-index: 5;
+    position: sticky;
+    top: 0;
+    height: 60px; /* Set a consistent height for better vertical alignment */
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+}
+
+.menu {
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: auto; /* Pushes the menu to the far right */
+    /* padding-right: 20px; */
+}
+
+.menu:hover {
+    color: #888;
+}
+
+.toggle-buttons {
+    position: fixed; /* Position absolutely within the header */
+    left: 50%; /* Align horizontally to the center */
+    top: 4%; /* Adjusted to place within the visible area */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    z-index: 10; /* Ensures it sits above background elements */
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    background: #ff7300;
+    color: #ffffff;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+    font-weight: bold;
+    font-size: larger;
+}
+
+button.active {
+    background: #000000;
+    color: rgb(255, 255, 255);
+}
+
+button:hover {
+    background: #bbb;
+    transform: scale(1.1);
+    transition: background 0.3s, color 0.3s;
+}

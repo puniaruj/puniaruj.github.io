@@ -1,38 +1,66 @@
-.App {
+:root {
+  --background-color: #333;
+  --text-color: #fff;
+  --header-background: #444;
+  --box-background: #555;
+  --box-text-color: #fff;
+  --h1-color: #ff5a01;
+  --loc-color:#a7a687;
+  --p-color:#756e6e;
+  --projects-color:white;
+}
+
+.light-theme {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --header-background: #f9f9f9;
+  --box-background: #e9e9e9;
+  --box-text-color: #333;
+  --h1-color: #ff6d1f;
+  --loc-color:#a7a687;
+  --p-color:#756e6e;
+  --projects-color:black;
+
+
+}
+
+.dark-theme {
+  --background-color: #040e25;
+  --text-color: #fff;
+  --header-background: #040e25;
+  --box-background: #555;
+  --box-text-color: #fff;
+  --h1-color: #ff5a01;
+  --loc-color:#eeedbe;
+  --p-color: #d3fff5;
+  --projects-color:rgb(0, 0, 0);
+
+
+}
+
+body {
+  margin: 0;
+  font-family: "Real Head Pro Demibold", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  font-family: "Real Head Pro Demibold", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 20px;
+  background-color: var(--header-background);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  background-color: var(--box-background);
+  color: var(--box-text-color);
 }
